@@ -47,16 +47,46 @@ PORTFOLIO
     border-bottom: 6px solid #323746;
     font-family: "Lato Bold", sans-serif;
     color: #666d89;
-    padding: 40px;
+    padding: 60px 40px 0 40px;
 }
 
+h2{
+    font-family: "Lato Black";
+    font-size: 30px;
+    letter-spacing: -0.01em;
+}
+
+p{
+    font-family: "Lato Light";
+    font-size: 18px;
+    margin-top: 22px;
+}
+
+.portfolio-buttons{
+    margin-top: 14px;
+    margin-left: 1px;
+}
+button:first-child{
+    padding: 2px 7px 3px 6px;  
+}
+button:nth-child(3){
+    padding: 2px 6px 3px 5px;
+    margin-right: 6px;  
+}
+button:last-child{
+    padding-right: 5px;  
+}
 button{
     background-color: #2D303A;
     color: #666d89;
-    border: 1px solid rgb(197, 197, 197);
+    border: 1px solid #666d89;
     border-radius: 5px;
-    padding: 3px 5px;           
+    padding: 2px 6px 3px 6px;  
+    margin-right: 7px;  
+    font-family: "Lato Regular", sans-serif; 
+    font-size: 12px;      
 }
+
 
 button:hover{
     color: rgba(255, 255, 0, 0.774);
@@ -75,9 +105,12 @@ button:focus{
 
 .images_box{
     width: 940px;
+    height: 625px;
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: -1px;
 }
 
 .images_box img{
@@ -88,24 +121,98 @@ button:focus{
 about_us
 */
 
-.about_us{
+.about-us{
     position: relative;
     background-color: #F2F2F2;
     width: 1020px;
     height: 734px;
     border-bottom: 6px solid #fff;
     color: #666D89;
-    padding: 60px 40px 0 40px;
+    padding: 59px 40px 0 40px;
+}
+
+.about-us__caption{
+    font-family: "Lato Black", sans-serif;
+    font-size: 30px;
+}
+
+.about-us__text{
+    font-family: "Lato Light", sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    margin-top: 18px;
+    margin-bottom: 45px;
+    line-height: 30px;
+}
+
+.persons-box{
+    display: flex;
+}
+
+.person:first-child{
+    margin-right: 19px;
+}
+
+.person:nth-child(2){
+    margin-right: 21px;
+}
+
+.person{
+    width: 300px;
+    margin-right: 20px;
+}
+
+.person:nth-child(2) .persone__name{
+    margin-left: 0;
+}
+.persone__name{
+    font-family: "Lato Black", sans-serif;
+    font-size: 18px;
+    max-height: 22px;
+    overflow: hidden;
+    margin-top: 11px;
+    margin-left: -1px;
+    letter-spacing: -0.01em;
+}
+
+.person:first-child .persone__desc{
+    letter-spacing: -0.005em;
+}
+.persone__desc{
+    text-align: justify;
+    font-family: "Lato Regular", sans-serif;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 0em;
+    margin-top: 8px;
+}
+
+.person:nth-child(3) .persone__socials{
+    margin-left: -1px;
+}
+.persone__socials{
+    display: flex;
 }
 
 .social{
     width: 32px;
     height: 32px;
     border: 1px solid #666D89;
-    border-radius: 50%;
+    border-radius: 48%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    margin: 24px 7px 0 1px;
 }
+.social:hover{
+    border-color: black;
+    border-width: 2px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.social:hover img{
+    transform: scale(1.2);
+}
+
 
