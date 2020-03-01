@@ -49,28 +49,32 @@ CONTACTS
     width: 1020px;
     border-bottom: 6px solid #EA676B;
     color: #F0D8D9;
-    padding: 60px 40px 0 40px;
+    padding: 59px 40px 0 40px;
     
 }
 
 h2{
     font-family: "Lato Black";
     font-size: 30px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.005em;
 }
 
 .contacts__desc{
     font-family: "Lato Light", sans-serif;
     font-size: 18px;
+    line-height: 30px;
+    margin-top: 18px;
+    text-align: justify;
 }
 
 .contact_box{
     display: flex;
     justify-content: space-between;
+    margin-top: 44px;
 }
 
 form{
-    width: 620px;
+    width: 619px;
     display: flex;
     flex-direction: column;
 }
@@ -78,9 +82,10 @@ form{
     background-color: #D6564F;
     border: none;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     height: 38px;
-    padding-left: 15px;
+    padding-left: 14px;
+    padding-bottom: 2px;
 }
 .contact_box input::placeholder{
     color: #F28B8E;
@@ -90,19 +95,74 @@ form{
 .contact_box textarea{
     background-color: #D6564F;
     border: none;
+    resize: none;
     border-radius: 5px;
-    padding-left: 15px;
+    padding-left: 14px;
+    padding-top: 10px;
+    height: 202px;
 }
 .contact_box textarea::placeholder{
     color: #F28B8E;
     font-family: "Lato Regular", sans-serif;
     font-size: 12px;
 }
+.contact_box .submit{
+    background-color: #F0D8D9;
+    width: 150px;
+    margin: 10px auto;
+}
+.contact_box .submit:hover{
+    cursor: pointer;
+    background-color: #2D303A;
+    color: #F0D8D9;
+}
 
 .contact_info{
     width: 300px;
     display: flex;
     flex-direction: column;
+}
+.contact_info h3{
+    letter-spacing: 0.015em;
+    font-size: 18px;
+    line-height: 18px;
+}
+.contact_info p{
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 22px;
+    hyphens: auto;
+    word-break: break-all;
+}
+.contact_info__main{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    line-height: 22px;
+}
+.contact_info__main>*{
+    position: relative;
+}
+.icon{
+    position: relative;
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    text-align: center;
+    margin-right: 10px;
+}
+.icon1{
+    position: absolute;
+    top: 2px;
+    left: 3px;
+}
+.contact_info__main .phone{
+    position: absolute;
+    top: -1px;
+}
+.contact_info__main .mail{
+    position: absolute;
+    top: -1px;
 }
 
 /*
@@ -121,7 +181,6 @@ footer{
 .socials{
     display: flex;
 }
-
 
 .social{
     width: 32px;
@@ -142,5 +201,16 @@ footer{
 
 .social:hover img{
     transform: scale(1.2);
+}
+
+.footer__copy{
+    margin-top: 10px;
+    margin-left: 2px;
+    letter-spacing: -0.01em;
+}
+
+.footer__socials{
+    margin-right: -7px;
+    margin-top: -22px;
 }
 
