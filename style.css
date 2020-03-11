@@ -67,7 +67,7 @@ h1{
     display: inline-block;
 }
 
-.header--active{
+header .active{
     color: #F06C64;
 }
 .str{
@@ -78,30 +78,36 @@ h1{
 
 nav{
     margin-top: 41px;
-    margin-right: 40px;
+    margin-right: 10px;
 }
-
-ul{
+a{
+    text-decoration: none;
+    color: white;
+}
+#menu{
     display: flex;
     flex-wrap: nowrap;
     list-style: none;
 }
-li{
-    margin-left: 13px;
+#menu li{
+    margin-right: 29px;
     font-size: 12px;
     text-transform: uppercase;
+    position: relative;
 }
-nav li:nth-child(2n+1):hover{
+li:not(:last-child)::after {
+	content: "";
+	background-color: #494e62;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	position: absolute;
+	top: 55%;
+	right: -16px;	
+}
+nav li:hover{
     cursor: pointer;
     color:rgb(83, 135, 184);
-}
-.point{
-    background-color: gray;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    margin-top: 7px;
-    opacity: 0.6;
 }
 
 
@@ -546,10 +552,12 @@ form{
     left: 3px;
 }
 .contact_info__main .phone{
+    color: #F0D8D9;
     position: absolute;
     top: -1px;
 }
 .contact_info__main .mail{
+    color: #F0D8D9;
     position: absolute;
     top: -1px;
 }

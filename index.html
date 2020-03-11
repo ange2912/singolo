@@ -9,30 +9,18 @@
 </head>
 <body>
   <div class="container">
-    <header>
+    <header id="home">
       <div class="logo">
         <h1>SINGOLO</h1>
-        <div class="header--active str">*</div>
+        <div class="active str">*</div>
       </div>
       <nav>
-        <ul>
-          <li class="header--active">home</li>
-          <li>
-            <div class="point"></div>
-          </li>
-          <li>services</li>
-          <li>
-            <div class="point"></div>
-          </li>
-          <li>portfolio</li>
-          <li>
-            <div class="point"></div>
-          </li>
-          <li>about</li>
-          <li>
-            <div class="point"></div>
-          </li>
-          <li>contact</li>
+        <ul id="menu">
+          <li><a href="#home" class="active">home</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
     </header>
@@ -51,7 +39,7 @@
       <img class="arrow_right" src="assets/images/right.png" alt="arrow right">
     </div>
 
-    <div class="servises_block">
+    <div class="servises_block" id="services">
       <h2>Our Services</h2>
       <p class="caption">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
         commodo luctus, nisi
@@ -114,7 +102,7 @@
         </article>
       </div>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <div class="portfolio-buttons">
@@ -140,7 +128,7 @@
         </div>
       </div>
       
-      <div class="about-us">
+      <div class="about-us" id="about">
           <h2 class="about-us__caption">About Us</h2>
           <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <div class="persons-box">
@@ -180,7 +168,7 @@
           </div>
       </div>
 
-      <div class="contacts">
+      <div class="contacts" id="contact">
         <h2>Get a Quote</h2>
         <p class="contacts__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="contact_box">
@@ -196,8 +184,8 @@
             <p class="contact_info__desc">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
             <div class="contact_info__main">
               <span><span class="icon"><img class="icon1" src="assets/images/location.png" alt=""></span><span>Elm St. 14/05 Lost City</span></span>
-              <span><a class="icon" href="tel:035283318635"><img src="assets/images/phone_contact.png" alt=""></a><span class="phone">03528 331 86 35</span></span>
-              <span><a class="icon" href="mailto:info@singolo.com"><img src="assets/images/mail.png" alt=""></a><span class="mail">info@singolo.com</span></span>
+              <span><div class="icon"><img src="assets/images/phone_contact.png" alt=""></div><a href="tel:035283318635"><span class="phone">03528 331 86 35</span></a></span>
+              <span><div class="icon"><img src="assets/images/mail.png" alt=""></div><a href="mailto:info@singolo.com"><span class="mail">info@singolo.com</span></a></span>
             </div>
           </div>
         </div>
@@ -213,5 +201,7 @@
           </div>
       </footer>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
