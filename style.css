@@ -14,10 +14,11 @@
 
 @font-face {
     font-family: "Lato Black";
-    font-style: normal;
+    src: url('fonts/Lato-Black.eot');
+    src: local('☺'), url('fonts/Lato-Black.woff') format('woff'), url('fonts/Lato-Black.ttf') format('truetype'), url('fonts/Lato-Black.svg') format('svg');
     font-weight: normal;
-    src: url(assets/fonts/Lato-Black.ttf) format('opentype');
-    }
+    font-style: normal;
+}
 
 @font-face {
     font-family: "Lato Regular";
@@ -188,7 +189,9 @@ servises_block
     padding: 59px 40px 0 40px;
 }
 
-h2,
+.servises_block h2{
+    font-family: "Lato Black", sans-serif; 
+}
 h3{
     font-family: "Lato Black", sans-serif; 
 }
@@ -245,12 +248,14 @@ article h3{
 
 article p{
     width: 219px;
+    height: 60px;
     font-family: "Lato Light", sans-serif;
     font-size: 12px;
     line-height: 21px;
     text-align: justify;
     margin-top: -2px;
     color: #767e9e;
+    overflow: hidden;
 }
 
 /* 
@@ -267,8 +272,8 @@ PORTFOLIO
     padding: 59px 40px 0 40px;
 }
 
-h2{
-    font-family: "Lato Black";
+.portfolio h2{
+    font-family: "Lato Black", sans-serif;
     font-size: 30px;
     letter-spacing: -0.01em;
 }
@@ -446,8 +451,8 @@ CONTACTS
     
 }
 
-h2{
-    font-family: "Lato Black";
+.contacts h2{
+    font-family: "Lato Black", sans-serif;
     font-size: 30px;
     letter-spacing: -0.005em;
 }
