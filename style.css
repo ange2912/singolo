@@ -125,7 +125,7 @@ nav li:hover{
     border-bottom: 6px solid #EA676B;
     
 }
-.slider_block2{
+/* .slider_block2{
     position: fixed;
     background-color: #648BF0;
     width: 1020px;
@@ -134,7 +134,7 @@ nav li:hover{
     z-index: 2;
     top: 94px;
     left: -886px;
-}
+} */
 
 .vShadow{
     position: absolute;
@@ -339,7 +339,7 @@ button:focus{
 
 .images_box{
     width: 940px;
-    height: 625px;
+    height: 621px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
