@@ -1,14 +1,36 @@
-/* Header MENU */
-const MENU = document.getElementById('menu');
-const MENU_ITEM = MENU.querySelectorAll('li');
-MENU.addEventListener('click', (evt) => {
-    MENU_ITEM.forEach(el => el.querySelector('a').classList.remove('active'));
-    evt.target.classList.add('active');
-})
+/* SCROLL MENU 
+
+*/
+document.addEventListener('scroll', scroll);
+function scroll(evt){
+  const MENU = document.getElementById('menu');
+  const links = MENU.querySelectorAll('a');
+  let currentPos = window.scrollY;
+  const divs = document.querySelectorAll('.container>div');
+  
+  divs.forEach(
+    (el)=>{
+      if(el.offsetTop <= currentPos+95 && el.offsetTop+el.offsetHeight >= currentPos){
+        links.forEach((a)=>{
+          a.classList.remove('active');
+          if(el.getAttribute('id') === a.getAttribute('href').substring(1)){
+            a.classList.add('active');
+          }
+        })
+      }
+    }
+  );
+} 
+// MENU.addEventListener('click', (evt) => {
+//     MENU_ITEM.forEach(el => el.querySelector('a').classList.remove('active'));
+//     evt.target.classList.add('active');
+// })
 
 
 
-/* Portfolio Buttons*/
+/* Portfolio Buttons
+
+*/
 const BUTTONS_BOX = document.getElementById('portfolio-buttons');
 const BUTTONS = BUTTONS_BOX.querySelectorAll('button');
 
@@ -35,7 +57,9 @@ BUTTONS_BOX.addEventListener('click', (evt) => {
     evt.target.classList.add('active');
 })
 
-// Porfolio Frames
+/* Porfolio Frames
+
+*/
 const IMAGES_BOX = document.getElementById('images_box');
 const IMG = IMAGES_BOX.querySelectorAll('img');
 IMAGES_BOX.addEventListener('click', (evt) => {
@@ -44,7 +68,9 @@ IMAGES_BOX.addEventListener('click', (evt) => {
 })
 
 
-// POPUP
+/* POPUP
+
+*/
 const popup = document.querySelector('.modal');
 const openPopupButton = document.querySelector('#submit');
 const closePopupButton = popup.querySelector('.button_close');
@@ -76,8 +102,6 @@ openPopupButton.addEventListener('click', function (evt) {
     document.getElementById('form').reset();
   });
 });
-
-
 // Esc
 // document.addEventListener('keydown', function (evt) {
 //   if (evt.keyCode === 27) {
@@ -86,7 +110,9 @@ openPopupButton.addEventListener('click', function (evt) {
 // });
 
 
-// Click phone
+/* Click phone
+
+*/
 const phones = document.querySelectorAll('.phone');
 let clickPhone =(event)=>{
   if (event.target.classList.contains('phoneOn')){
@@ -102,8 +128,9 @@ for (let phone of phones){
 }
 
 
-// Slider
+/*Slider
 
+*/
 const arrowLeft = document.getElementById("arrow_left")
 const arrowRight = document.getElementById("arrow_right")
 const slides = document.querySelectorAll(".slide")
@@ -115,7 +142,6 @@ arrowRight.addEventListener("click", changeSlideRight)
 function changeSlideLeft() {
   changeSlide("left")
 }
-
 function changeSlideRight() {
   changeSlide("right")
 }
