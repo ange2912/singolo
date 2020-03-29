@@ -52,6 +52,9 @@ html{
     @media screen and (max-width: $mobile) {
         width: 375px;
     }
+    @media screen and (max-width: 375px) {
+        max-width: 100%;
+    }
 }
 
 /* 
@@ -76,6 +79,9 @@ header{
         width: 375px;
         height: 71px;
     }
+    @media screen and (max-width: 375px) {
+        max-width: 100%;
+    }
 }
 
 .burger{
@@ -86,17 +92,54 @@ header{
         left: 20px;
         top: 26px;
         background: url("assets/images/Burger-h.png") no-repeat;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.7;
+        }
+        z-index: 5;
+    }
+    @media screen and (max-width: 375px) {
+        left: 5%;
+    }
+}
+
+.burger_active{
+    transform: rotate(90deg);
+}
+
+.burger_nav{
+    display: none;
+    @media screen and (max-width: $mobile) {
+    position: fixed;
+    top: -40px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgb(37, 39, 48);
+    max-width: 300px;
+    #burger_menu{
+        margin-top: 120px;
+        list-style: none;
+        li{
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+    }
     }
 }
 
 .logo{
-    margin-left: 40px;
-    height: 40px;
     position: relative;
-    @media screen and (max-width: $mobile) {
+    margin-left: -375px;
+    height: 40px;
+    z-index: 5;
+    @media screen and (max-width: $tablet){
+        margin-left: -125px;
+    }
+    @media screen and (max-width: $mobile){
         width: 92px;
         margin: 0 auto;
-        
     }
 }
 
@@ -124,6 +167,10 @@ header .active{
     position: absolute;
     transform: scale(1.5);
     top: 35px;
+    @media screen and (max-width: $mobile) {
+        top: 24px;
+        transform: scale(1.1);
+    }
 }
 
 nav{
@@ -166,6 +213,9 @@ nav li:hover{
 #hdr{
     height: 95px;
     width: 1020px;
+    @media screen and (max-width: $mobile) {
+        height: 71px;
+    }
 }
 
 /*
@@ -180,6 +230,14 @@ nav li:hover{
     @media screen and (max-width: $tablet){
         height: 452px;
     }
+    @media screen and (max-width: $mobile){
+        height: 221px;
+    }
+    @media screen and (max-width: 375px) {
+        min-width: 320px;
+        max-width: 100%;
+        padding: 10%;
+    }
 }
 
 .vShadow{
@@ -190,6 +248,14 @@ nav li:hover{
         transform: scale(0.753);
         left: 53px;
         top: 74px;
+    }
+    @media screen and (max-width: $mobile){
+        top: -54px;
+        left: -26px;
+        transform: scale(0.368);
+    }
+    @media screen and (max-width: 375px) {
+        left: -48px;
     }
 }
 .vPhone{
@@ -203,6 +269,14 @@ nav li:hover{
         left: 53px;
         top: 74px;
     }
+    @media screen and (max-width: $mobile){
+        transform: scale(0.368);
+        top: -54px;
+        left: -26px;
+    }
+    @media screen and (max-width: 375px) {
+        left: -48px;
+    }
 }
 .vScreen{
     position: absolute;
@@ -213,6 +287,14 @@ nav li:hover{
         transform: scale(0.753);
         top: 137px;
         left: 64px;
+    }
+    @media screen and (max-width: $mobile){
+        transform: scale(0.368);
+        top: 6px;
+        left: -16px;
+    }
+    @media screen and (max-width: 375px) {
+        left: -38px;
     }
 }
 
@@ -229,6 +311,22 @@ nav li:hover{
         top: 137px;
         left: 64px;
     }
+    @media screen and (max-width: $mobile){
+        transform: scale(0.368);
+        top: 6px;
+        left: -16px;
+    }
+    @media screen and (max-width: 375px) {
+        left: -38px;
+    }
+}
+
+.hor{
+    @media screen and (max-width: 375px) {
+        position: absolute;
+        top: 6px;
+        left: -10px;
+    }
 }
 
 .blackBackH{
@@ -244,6 +342,14 @@ nav li:hover{
         transform: scale(0.753) rotate(90deg);
         left: 390px;
         top: 137px;
+    }
+    @media screen and (max-width: $mobile){
+        transform: scale(0.368) rotate(90deg);
+        top: 6px;
+        left: 143px; 
+    }
+    @media screen and (max-width: 375px) {
+        left: 115px;
     }
 }
 
@@ -265,6 +371,8 @@ nav li:hover{
     cursor: pointer;
 }
 
+
+
 .toggle{
     display: block;
 }
@@ -278,6 +386,14 @@ nav li:hover{
         left: 262px;
         top: 199px;
     }
+    @media screen and (max-width: $mobile){
+        transform: scale(0.368);
+        top: 68px;
+        left: 10px;
+    }
+    @media screen and (max-width: 375px) {
+        left: -17px;
+    }
 }
 .gPhone{
     position: absolute;
@@ -289,6 +405,14 @@ nav li:hover{
         left: 262px;
         top: 199px;
     }
+    @media screen and (max-width: $mobile){
+        transform: scale(0.368);
+        top: 68px;
+        left: 10px;
+    }
+    @media screen and (max-width: 375px) {
+        left: -17px;
+    }
 }
 .gScreen{
     position: absolute;
@@ -298,6 +422,14 @@ nav li:hover{
         transform: scale(0.753);
         left: 318px;
         top: 210px;
+    }
+    @media screen and (max-width: $mobile){
+        transform: scale(0.368);
+        top: 78px;
+        left: 70px;
+    }
+    @media screen and (max-width: 375px) {
+        left: 43px;
     }
 }
 
@@ -310,6 +442,13 @@ nav li:hover{
         top: 300px;
         left: 32px;
     }
+    @media screen and (max-width: $mobile){
+        top: 168px;
+        left: 10px;
+    }
+    @media screen and (max-width: 375px) {
+        left: 1%;
+    }
 }
 .arrow_right{
     position: absolute;
@@ -319,6 +458,14 @@ nav li:hover{
     @media screen and (max-width: $tablet){
         top: 300px;
         left: 724px;
+    }
+    @media screen and (max-width: $mobile){
+        top: 168px;
+        left: 349px;
+    }
+    @media screen and (max-width: 375px) {
+        left: none;
+        left: 304px;
     }
 }
 .arrow_left:hover,
@@ -527,6 +674,16 @@ servises_block
         height: 671px;
         padding-top: 39px;
     }
+    @media screen and (max-width: $mobile){
+        width: 375px;
+        height: 1027px;
+        padding: 31px 30px 0 30px;
+    }
+    @media screen and (max-width: 375px) {
+        width: 100%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
 }
 
 .servises_block h2{
@@ -554,6 +711,13 @@ h3{
     @media screen and (max-width: $tablet){
         width: 670px;
     }
+    @media screen and (max-width: $mobile){
+        width: 307px;
+    }
+    @media screen and (max-width: 375px) {
+        width: 100%;
+        font-size: 0.9em;
+    }
 }
 
 .articles{
@@ -564,6 +728,13 @@ h3{
     @media screen and (max-width: $tablet){
         margin-top: 38px;
         width: 654px;
+    }
+    @media screen and (max-width: $mobile){
+        margin-top: 24px;
+        width: 307px;
+    }
+    @media screen and (max-width: 375px) {
+        width: 100%;
     }
 }
 
@@ -576,6 +747,9 @@ article{
     height: 123px;
     @media screen and (max-width: $tablet){
         height: 142px;
+    }
+    @media screen and (max-width: $mobile){
+        height: 118px;
     }
 }
 
@@ -624,6 +798,16 @@ PORTFOLIO
         width: 768px;
         height: 1100px;
     }
+    @media screen and (max-width: $mobile){
+        width: 375px;
+        height: 842px;
+        padding: 44px 30px 0 29px;
+    }
+    @media screen and (max-width: 375px) {
+        width: 100%;
+        padding: 44px 7% 0 5%;
+        height: 800px;
+    }
 }
 
 .portfolio h2{
@@ -639,19 +823,29 @@ p{
     @media screen and (max-width: $tablet){
         width: 650px;
     }
+    @media screen and (max-width: $mobile){
+        width: 307px;
+        line-height: 28px;
+    }
+    @media screen and (max-width: 375px) {
+        width: 100%;
+    }
 }
 
 .portfolio-buttons{
     margin-top: 14px;
     margin-left: 1px;
-    width: 288px;
+    width: 290px;
+    @media screen and (max-width: $mobile){
+        margin-top: 16px;
+    }
+  
 }
 button:first-child{
     padding: 2px 7px 3px 6px;  
 }
 button:nth-child(3){
     padding: 2px 6px 3px 5px;
-    margin-right: 6px;  
 }
 button{
     background-color: #2D303A;
@@ -661,7 +855,10 @@ button{
     padding: 2px 6px 3px 6px;  
     margin-right: 7px;  
     font-family: "Lato Regular", sans-serif; 
-    font-size: 12px;      
+    font-size: 12px; 
+    @media screen and (max-width: 375px) {
+        margin-right: 2%;
+    }     
 }
 
 button:last-child{
@@ -698,12 +895,30 @@ button:focus{
         height: 829px;
         margin-top: 9px;
     }
+    @media screen and (max-width: $mobile){
+        width: 316px;
+        height: 565px;
+        margin-top: 11px;
+    }
+    @media screen and (max-width: 375px) {
+        width: 100%;
+        height: 500px;
+    }
 }
 
 .images_box img{
     margin-top: 20px;
     width: 220px;
     height: 187px;
+    @media screen and (max-width: $mobile){
+        width: 151px;
+        height: 128px;
+        margin-top: 13px;
+    }
+    @media screen and (max-width: 375px) {
+        width: 47%;
+        height: 110px;
+    }
 }
 
 .frame{
@@ -721,10 +936,20 @@ about_us
     height: 734px;
     border-bottom: 6px solid #fff;
     color: #666D89;
-    padding: 51px 40px 0 40px;
+    padding: 51px 20px 0 39px;
     @media screen and (max-width: $tablet){
         width: 768px;
         height: 671px;
+    }
+    @media screen and (max-width: $mobile){
+        width: 375px;
+        height: 1751px;
+        padding: 33px 30px 0 30px;
+    }
+    @media screen and (max-width: 375px) {
+        width: 100%;
+        height: 1670px;
+        padding: 44px 5% 0 5%;
     }
 }
 
@@ -743,10 +968,23 @@ about_us
     @media screen and (max-width: $tablet){
         margin-bottom: 40px;
     }
+    @media screen and (max-width: $mobile){
+        margin-bottom: 23px;
+    }
+    @media screen and (max-width: 375px) {
+        font-size: 0.9em;
+    }
 }
 
 .persons-box{
     display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: $mobile){
+        width: 313px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100%;
+    }
 }
 
 .person{
@@ -757,6 +995,20 @@ about_us
         margin-right: 15px;
         &>img{
             width: 219px;
+        }
+    }
+    @media screen and (max-width: $mobile){
+        width: 313px;
+        margin-bottom: 33px;
+        &>img{
+            width: 313px;
+        }
+    }
+    @media screen and (max-width: 375px){
+        width: 100%;
+        margin-bottom: 33px;
+        &>img{
+            width: 100%;
         }
     }
 }
@@ -775,6 +1027,9 @@ about_us
     @media screen and (max-width: $tablet){
         margin-top: 7px;
     }
+    @media screen and (max-width: $mobile){
+        margin-top: 12px;
+    }
 }
 
 .person:first-child .persone__desc{
@@ -790,6 +1045,12 @@ about_us
     @media screen and (max-width: $tablet){
         width: 219px;
         margin-top: 1px;
+    }
+    @media screen and (max-width: $mobile){
+        width: 315px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100%;
     }
 }
 
@@ -840,6 +1101,15 @@ CONTACTS
        width: 768px;
        height: 634px;
     }
+    @media screen and (max-width: $mobile){
+        width: 375px;
+        height: 970px;
+        padding: 45px 30px 0 30px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100%;
+        padding: 59px 5% 0 5%;
+    }
 }
 
 .contacts h2{
@@ -857,10 +1127,18 @@ CONTACTS
     @media screen and (max-width: $tablet){
         width: 670px;
     }
+    @media screen and (max-width: $mobile){
+        width: 307px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100%;
+        font-size: 0.9em;
+    }
 }
 
 .contact_box{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 44px;
     @media screen and (max-width: $tablet){
@@ -874,6 +1152,12 @@ form{
     flex-direction: column;
     @media screen and (max-width: $tablet){
         width: 441px;
+    }
+    @media screen and (max-width: $mobile){
+        width: 314px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100%;
     }
 }
 .contact_box input{
@@ -914,6 +1198,14 @@ form{
     background-color: #F0D8D9;
     width: 150px;
     margin: 10px auto;
+    @media screen and (max-width: $mobile){
+        width: 314px;
+        height: 50px;
+        margin-top: 12px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100%;
+    }
 }
 .contact_box .submit:hover{
     cursor: pointer;
@@ -927,6 +1219,12 @@ form{
     flex-direction: column;
     @media screen and (max-width: $tablet){
         width: 222px;
+    }
+    @media screen and (max-width: $mobile){
+        margin-top: 23px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100%;
     }
 }
 .contact_info h3{
@@ -945,6 +1243,13 @@ form{
         word-break: normal;
         margin-top: 1px;
     }
+    @media screen and (max-width: $mobile){
+        width: 314px;
+        margin-top: 3px;
+    }
+    @media screen and (max-width: 375px){
+        width: 100%;
+    }
 }
 .contact_info__main{
     font-family: "Lato Regular", sans-serif;
@@ -956,9 +1261,15 @@ form{
     @media screen and (max-width: $tablet){
         margin-top: 9px;
     }
+    @media screen and (max-width: $mobile){
+        margin-top: 11px;
+    }
 }
 .contact_info__main>*{
     position: relative;
+    @media screen and (max-width: $mobile){
+        margin-top: 3px;
+    }
 }
 .icon{
     position: relative;
@@ -1008,6 +1319,10 @@ form{
     background-color:#fff;
     z-index: 2;
     border-radius: 8px;
+    @media screen and (max-width: $mobile){
+        width: 314px;
+        height: 314px;
+    }
 }
 
 .window__messages {
@@ -1023,6 +1338,10 @@ form{
     display: flex;
     flex-direction: column;
     text-align: justify;
+    @media screen and (max-width: $mobile){
+        width: 294px;
+        height: 294px;
+    }
 }
 .yellow{
     color: yellow;
@@ -1043,6 +1362,10 @@ form{
     top: 320px;
     left: 175px;
     margin: 0;
+    @media screen and (max-width: $mobile){
+        top: 250px;
+        left: 130px;
+    }
 }
 
 /*
@@ -1061,6 +1384,13 @@ footer{
     @media screen and (max-width: $tablet){
         width: 768px;
         height: 76px;
+    }
+    @media screen and (max-width: $mobile){
+        width: 375px;
+        justify-content: center;
+    }
+        @media screen and (max-width: 375px){
+        width: 100%;
     }
 }
 
@@ -1088,6 +1418,9 @@ footer .social{
     margin-top: 10px;
     margin-left: 2px;
     letter-spacing: -0.01em;
+    @media screen and (max-width: $mobile){
+        display: none;
+    }
 }
 
 .footer__socials{
