@@ -8,66 +8,90 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <header id="home">
-      <div class="logo">
-        <h1>SINGOLO</h1>
-        <div class="active str">*</div>
-      </div>
-      <nav>
-        <ul id="menu">
-          <li><a href="#home" class="active">home</a></li>
-          <li><a href="#services">services</a></li>
-          <li><a href="#portfolio">portfolio</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="slider_block">
-      <img class="arrow_left" src="assets/images/left.png" alt="arrow left">
-      <div>
-        <img class="vShadow" src="assets/images/Shadow_vert.png" alt="shadow">
-        <img class="vPhone" src="assets/images/vPhone.png" alt="phone">
-        <img class="vScreen" src="assets/images/Screen_vert.png" alt="screen yellow">
-      </div>
-      <div>
-        <img class="gShadow" src="assets/images/Shadow_hor.png" alt="shadow">
-        <img class="gPhone" src="assets/images/gPhone.png" alt="horisontal phone">
-        <img class="gScreen" src="assets/images/gScreen.png" alt="screen blue">
-      </div>
-      <img class="arrow_right" src="assets/images/right.png" alt="arrow right">
-    </div>
-    <!-- <div class="slider_block2">
-      <img class="arrow_left" src="assets/images/left.png" alt="arrow left">
-      <div>
-        <img class="vShadow" src="assets/images/Shadow_vert.png" alt="shadow">
-        <img class="vPhone" src="assets/images/vPhone.png" alt="phone">
-        <img class="vScreen" src="assets/images/Screen_vert.png" alt="screen yellow">
-      </div>
-      <div>
-        <img class="gShadow" src="assets/images/Shadow_hor.png" alt="shadow">
-        <img class="gPhone" src="assets/images/gPhone.png" alt="horisontal phone">
-        <img class="gScreen" src="assets/images/gScreen.png" alt="screen blue">
-      </div>
-      <img class="arrow_right" src="assets/images/right.png" alt="arrow right">
-    </div> -->
-    <div class="servises_block" id="services">
-      <h2>Our Services</h2>
-      <p class="caption">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
-        commodo luctus, nisi
-        erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
-        mauris condimentum nibh.</p>
-      <div class="articles">
-        <article>
-          <div class="pen"><img src="assets/images/pen.png" alt=""></div>
-          <div>
-            <h3>Custom Design</h3>
-            <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut,
-              ultrices
-              velit.</p>
+    <section class="modal">
+        <div class="window">
+          <div class="window__messages">
+          <span class="yellow">Письмо отправлено</span>
+          <span id='subjectBox'></span>
+          <span id='descriptionBox'></span>
           </div>
-        </article>
+          <button class="button_close">OK</button>
+        </div>
+      </section>
+<div class="container">
+      
+<header>
+  <div class="burger"></div>
+  <div class="logo">
+    <h1>SINGOLO</h1>
+    <div class="active str">*</div>
+  </div>
+  <nav>
+    <ul id="menu">
+      <li><a href="#home" class="active">home</a></li>
+      <li><a href="#services">services</a></li>
+      <li><a href="#portfolio">portfolio</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="hdr">
+
+</div>
+
+<div class="slider_block" id="home">
+  <img id="arrow_left" class="arrow_left" src="assets/images/left.png" alt="arrow left">
+  <div class="slide">
+      <img class="vShadow" src="assets/images/Shadow_vert.png" alt="shadow">
+    <div class="phone">
+      <img class="vPhone phoneOn" src="assets/images/vPhone.png" alt="phone">
+      <img class="vScreen phoneOn" src="assets/images/Screen_vert.png" alt="screen yellow">
+      <div class="blackBackV"></div>
+    </div>
+    <div class="hor">
+    <img class="gShadow" src="assets/images/Shadow_hor.png" alt="shadow">
+    <div class="phone">
+      <img class="gPhone phoneOn" src="assets/images/gPhone.png" alt="horisontal phone">
+      <img class="gScreen phoneOn" src="assets/images/gScreen.png" alt="screen blue">
+      <div class="blackBackH"></div>
+    </div>
+  </div>
+  </div>
+
+  <div class="slide slide_hide slider_two">
+    <div class="slide_blue">
+      <img class="phone_back1" src="assets/images/slide2backPhone.png" alt="" />
+      <img class="phone_front phoneOn" src="assets/images/slide2phone.png" alt="" />
+      <div class="phone">
+        <img class="phone_area phoneOn" src="assets/images/phone_area.png" alt="phone-green" />
+        <div class="blackBackB"></div>
+      </div>
+      <img class="phone_back2" src="assets/images/slide2backPhone.png" alt="screen" />
+    </div>
+  </div>
+
+  <img id="arrow_right" class="arrow_right" src="assets/images/right.png" alt="arrow right">
+</div>
+
+
+<div class="servises_block" id="services">
+  <h2>Our Services</h2>
+  <p class="caption">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
+    commodo luctus, nisi
+    erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
+    mauris condimentum nibh.</p>
+  <div class="articles">
+    <article>
+      <div class="pen"><img src="assets/images/pen.png" alt=""></div>
+      <div>
+        <h3>Custom Design</h3>
+        <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut,
+          ultrices
+          velit.</p>
+      </div>
+    </article>
         <article>
           <div><img src="assets/images/bulb.png" alt=""></div>
           <div>
@@ -184,13 +208,16 @@
         <h2>Get a Quote</h2>
         <p class="contacts__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="contact_box">
-          <form action="#">
+          <form action="#" id="form">
             <input type="text" placeholder="Name (Required)" required>
             <input type="email" placeholder="Email (Required)" required>
-            <input type="text" placeholder="Subject">
+            <input type="text" placeholder="Subject" id="subject">
             <textarea name="description" id="description" placeholder="Describe your project in detail..."></textarea>
             <input class="submit" type="submit" id="submit">
           </form>
+
+          
+
           <div class="contact_info">
             <h3>Contact Information</h3>
             <p class="contact_info__desc">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
